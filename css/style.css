@@ -365,10 +365,11 @@ a.pill:hover{background:var(--panel-2);border-color:rgba(255,255,255,.2);transfo
   .stack-grid{grid-template-columns:1fr 1fr}
   .poster-block{position:static;transform:none;text-align:left!important;margin:22px 0}
   .poster{flex-direction:column;padding:34px 0}
-  /* name stays in flow and the figure overlaps it — person in front of the name, poster-style */
-  .poster-name{position:relative;inset:auto;z-index:1}
+  /* figure overlays the name's flow slot; the name then slides down to sit
+     behind the lower torso — same band as desktop (top at 43.3% of the figure) */
+  .poster-figure{margin-top:calc(-18vw - 18px)}
+  .poster-name{position:relative;inset:auto;z-index:1;transform:translateY(calc(min(54vh,520px) * 0.433 - 18px))}
   .poster-name span{font-size:clamp(50px,18vw,182px)}
-  .poster-figure{margin-top:-9.5vw}
   .figure-panel{border-radius:18px}
 }
 @media (max-width:640px){
@@ -382,6 +383,7 @@ a.pill:hover{background:var(--panel-2);border-color:rgba(255,255,255,.2);transfo
 
   .poster-badge{min-width:74vw}
   .poster-figure img{height:min(48vh,440px)}
+  .poster-name{transform:translateY(calc(min(48vh,440px) * 0.433 - 18px))}
   .poster-badge{min-width:min(330px,68vw)}
   .contact-foot{justify-content:center;text-align:center}
 }
