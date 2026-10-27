@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slipper Zero — Live Demo — Sarthak Bhagirath Patil</title>
+<meta name="description" content="Slipper Zero demo — animated 2D model: Wi-Fi frames hop from the access point into the ESP32 observer and into a live capture log." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=18" />
+<link rel="stylesheet" href="css/demo.css?v=2" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4d00'/><text x='16' y='22' font-size='16' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+</head>
+<body>
+
+<nav class="nav show">
+  <a class="nav-logo" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1"/>
+    </svg>
+  </a>
+  <div class="nav-pill">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#stack">Stack</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="demo-main">
+  <p class="demo-kicker"><span class="chip-logo">
+    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+  </span> Project 03 — Live demo</p>
+
+  <h1 class="demo-title">Slipper&nbsp;<em>Zero</em></h1>
+  <p class="demo-tag">Wi-Fi Network Security &amp; Diagnostic Tool</p>
+  <p class="demo-copy">A simple 2D vector model — Wi-Fi frames hop from the access point
+  through the air into the ESP32 passive observer, then into the animated capture log
+  as recorded output.</p>
+
+  <div class="figure-panel demo-figure">
+    <svg class="fig" viewBox="0 0 900 380" role="img" aria-label="Slipper Zero - ESP32 observing Wi-Fi frames and recording a capture log">
+      <rect x="84" y="64" width="116" height="66" rx="10" class="s-box"/>
+      <text x="142" y="92" class="s-label" text-anchor="middle">AP</text>
+      <text x="142" y="110" class="s-sub" text-anchor="middle">802.11 radio</text>
+      <g class="s-arcs">
+        <path d="M116 54 q26 -20 52 0"/>
+        <path d="M106 54 q36 -30 72 0"/>
+        <path d="M96 54 q46 -40 92 0"/>
+      </g>
+      <path d="M200 120 C 270 140, 300 150, 336 176" class="s-link s-link--dotted"/>
+      <rect x="336" y="158" width="164" height="86" rx="10" class="s-box"/>
+      <rect x="470" y="96" width="4" height="62" rx="2" class="s-ant"/>
+      <text x="418" y="192" class="s-label" text-anchor="middle">ESP32</text>
+      <text x="418" y="210" class="s-sub" text-anchor="middle">passive observer</text>
+      <circle cx="352" cy="174" r="3.5" class="s-led"/>
+      <path d="M500 200 C 560 220, 590 216, 642 208" class="s-link"/>
+      <rect x="642" y="118" width="196" height="140" rx="12" class="s-box"/>
+      <rect x="656" y="132" width="168" height="96" rx="6" class="s-screen"/>
+      <g class="s-log">
+        <rect x="666" y="144" width="120" height="6" rx="3"/>
+        <rect x="666" y="160" width="88"  height="6" rx="3"/>
+        <rect x="666" y="176" width="140" height="6" rx="3"/>
+        <rect x="666" y="192" width="64"  height="6" rx="3"/>
+        <rect x="666" y="208" width="104" height="6" rx="3"/>
+      </g>
+      <text x="642" y="286" class="s-sub">capture recorder — HCCAPX out</text>
+      <circle r="5" class="frame frame--air"/>
+      <circle r="5" class="frame frame--rec"/>
+      <text x="88" y="368" class="s-sub">&#8230; wireless exchange</text>
+      <text x="330" y="368" class="s-sub">- - observed copy</text>
+      <text x="520" y="368" class="s-sub">— recorded file</text>
+    </svg>
+  </div>
+  <p class="swipe-hint">&#8592; swipe the figure &#8594;</p>
+  <p class="foot-note demo-foot">2D vector model — frames hop from the air into the observer, then into the recording. IEEE paper: <a href="https://doi.org/10.1109/gcwot63882.2024.10805625" target="_blank" rel="noopener">doi.org/10.1109/gcwot63882.2024.10805625</a></p>
+
+  <section class="demo-model" id="model">
+    <p class="demo-model-kicker">Project working — interactive model</p>
+    <h2 class="demo-model-title">The observer, <em>up close</em></h2>
+    <p class="demo-model-sub">The full capture sequence — beacon, probe request and the EAPOL
+    M1/M2 pair hop from the AP into the ESP32&#8217;s passive observer and onto the recorder&#8217;s
+    paper. Open any packet row to inspect its decoded fields and replay that frame; omit M2
+    and the matched-pair output gate stays shut.</p>
+    <div class="figure-panel demo-model-frame">
+      <iframe data-anatomy-embed src="figures/slipper-zero.html?theme=dark&amp;autoplay=1" title="Slipper Zero interactive isometric model — AP radio exchange, ESP32 observer and capture recorder" loading="lazy"></iframe>
+    </div>
+    <p class="foot-note demo-model-foot">Interactive — packet rows, replay and the zoomable drawing inspector are live; the frame auto-fits. Static vector: <a href="figures/slipper-zero.svg">light</a> &#183; <a href="figures/slipper-zero-dark.svg">dark</a></p>
+  </section>
+
+  <div class="demo-actions">
+    <a class="demo-btn" href="demo-cablescope.html">Next demo
+      <svg viewBox="0 0 14 12" width="13" height="11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h11M8 1.5 12.5 6 8 10.5"/></svg>
+    </a>
+    <a class="pill" href="index.html#p-slipperzero">&#8592; Back to all work</a>
+  </div>
+</main>
+
+<script defer src="figures/embed.js"></script>
+</body>
+</html>

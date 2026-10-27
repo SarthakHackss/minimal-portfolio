@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CableScope — Live Demo — Sarthak Bhagirath Patil</title>
+<meta name="description" content="CableScope demo — animated pipeline: STM32 pulse, coax fault reflection, UART handoff, Raspberry Pi 5 acquisition, 1D CNN classification and the web dashboard verdict." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=18" />
+<link rel="stylesheet" href="css/demo.css?v=2" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4d00'/><text x='16' y='22' font-size='16' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+</head>
+<body>
+
+<nav class="nav show">
+  <a class="nav-logo" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1"/>
+    </svg>
+  </a>
+  <div class="nav-pill">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#stack">Stack</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="demo-main">
+  <p class="demo-kicker"><span class="chip-logo">
+    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+  </span> Project 01 — Live demo</p>
+
+  <h1 class="demo-title">Cable<em>Scope</em></h1>
+  <p class="demo-tag">AI-Powered Cable Fault Detection &amp; Diagnostics System</p>
+  <p class="demo-copy">The full pipeline on one synchronized 9&nbsp;s loop — STM32 signal
+  generation and acquisition, a fault reflection down the coax run, the UART handoff into
+  the Raspberry Pi 5, 1D CNN classification and the web dashboard verdict.</p>
+
+  <div class="figure-panel demo-figure">
+    <svg class="fig" viewBox="0 0 1200 540" role="img" aria-label="CableScope pipeline — STM32 pulse, cable fault, reflection, Raspberry Pi 5, 1D CNN and web dashboard">
+      <!-- ── 01 · STM32 pulse engine ── -->
+      <rect x="60" y="96" width="132" height="112" rx="10" class="s-box"/>
+      <rect x="74" y="106" width="50" height="44" rx="6" class="s-die"/>
+      <text x="99" y="132" class="s-die-t" text-anchor="middle">MCU</text>
+      <circle cx="160" cy="114" r="4" class="s-led cs-led-tx"/>
+      <circle cx="160" cy="136" r="4" class="s-led s-led--rx cs-led-rx"/>
+      <text x="170" y="118" class="s-micro">TX</text>
+      <text x="170" y="140" class="s-micro">RX</text>
+      <text x="126" y="176" class="s-label" text-anchor="middle">STM32F303RE</text>
+      <text x="126" y="194" class="s-sub" text-anchor="middle">pulse · timer · ADC</text>
+      <text x="60" y="80" class="s-num">01 — pulse in</text>
+
+      <!-- ── 02 · the cable run ── -->
+      <rect x="206" y="298" width="486" height="3" class="s-wire"/>
+      <rect x="206" y="307" width="486" height="3" class="s-wire"/>
+      <rect x="200" y="295" width="9" height="18" rx="2" class="s-conn"/>
+      <rect x="688" y="295" width="9" height="18" rx="2" class="s-conn"/>
+      <text x="210" y="342" class="s-sub">coax run · RG-58 · 50 m</text>
+      <text x="690" y="342" class="s-sub" text-anchor="end">coax / ethernet</text>
+      <g class="cs-fault">
+        <circle cx="552" cy="303" r="15" class="s-fault-halo"/>
+        <polyline points="545,295 551,303 545,311" class="s-jag"/>
+        <polyline points="559,295 553,303 559,311" class="s-jag"/>
+        <text x="552" y="276" class="s-accent" text-anchor="middle">fault site</text>
+      </g>
+      <text x="230" y="284" class="s-accent cs-dt">&#916;t = 5.21 &#181;s &#8594; 0.65 &#215; L</text>
+      <circle cy="303" r="6" class="cs-pulse"/>
+      <circle cy="303" r="6" class="cs-refl"/>
+      <circle cx="552" cy="303" r="11" class="cs-impact"/>
+      <text x="230" y="80" class="s-num">02 — reflectometry</text>
+
+      <!-- ── 03 · UART handoff ── -->
+      <path d="M198 150 H 712" class="s-link cs-uart-line"/>
+      <text x="452" y="140" class="s-sub" text-anchor="middle">UART · 115200 — raw acquisition trace</text>
+      <rect y="144" width="28" height="11" rx="3" class="cs-uart"/>
+      <text x="585" y="80" class="s-num" text-anchor="middle">03 — handoff</text>
+
+      <!-- ── 04 · Raspberry Pi 5 ── -->
+      <rect x="718" y="82" width="242" height="170" rx="12" class="s-board"/>
+      <g class="s-gpio">
+        <circle cx="736" cy="97" r="2.4"/><circle cx="748" cy="97" r="2.4"/><circle cx="760" cy="97" r="2.4"/><circle cx="772" cy="97" r="2.4"/><circle cx="784" cy="97" r="2.4"/><circle cx="796" cy="97" r="2.4"/><circle cx="808" cy="97" r="2.4"/><circle cx="820" cy="97" r="2.4"/><circle cx="832" cy="97" r="2.4"/>
+      </g>
+      <rect x="752" y="116" width="94" height="64" rx="6" class="s-die"/>
+      <text x="799" y="144" class="s-die-t" text-anchor="middle">BCM2712</text>
+      <text x="799" y="160" class="s-die-t s-die-t--sub" text-anchor="middle">quad Cortex-A76</text>
+      <rect x="858" y="118" width="42" height="27" rx="4" class="s-chip"/>
+      <rect x="858" y="153" width="42" height="27" rx="4" class="s-chip"/>
+      <rect x="908" y="116" width="36" height="64" rx="4" class="s-chip"/>
+      <text x="926" y="152" class="s-die-t s-die-t--sub" text-anchor="middle">USB</text>
+      <text x="839" y="206" class="s-label" text-anchor="middle">RASPBERRY PI 5</text>
+      <text x="839" y="224" class="s-sub" text-anchor="middle">FastAPI · PyTorch · Go/SQLite</text>
+      <circle cx="946" cy="98" r="4" class="s-led cs-led-pi"/>
+      <text x="718" y="80" class="s-num">04 — acquire + infer</text>
+
+      <!-- ── 05 · 1D CNN ── -->
+      <text x="718" y="292" class="s-label">1D CNN — fault classifier</text>
+      <rect x="718" y="304" width="118" height="54" rx="8" class="s-screen"/>
+      <polyline class="cs-wave" pathLength="100" points="726,344 748,344 748,318 772,318 772,331 796,331 796,325 828,325"/>
+      <rect x="852" y="312" width="11" height="38" rx="2" class="s-bar cs-bar1"/>
+      <rect x="872" y="305" width="11" height="52" rx="2" class="s-bar cs-bar2"/>
+      <rect x="892" y="298" width="11" height="66" rx="2" class="s-bar cs-bar3"/>
+      <g class="cs-results">
+        <rect x="912" y="308" width="98" height="26" rx="13" class="s-out-chip"/>
+        <text x="961" y="325" class="s-out-t" text-anchor="middle">OPEN &#183; &#915; = +1</text>
+        <rect x="912" y="342" width="98" height="6" rx="3" class="s-track"/>
+        <rect x="912" y="342" width="93" height="6" rx="3" class="cs-conf"/>
+        <text x="912" y="364" class="s-sub">confidence 96% &#183; location 0.65 &#215; L</text>
+      </g>
+      <text x="718" y="396" class="s-num">05 — classify + locate</text>
+
+      <!-- ── 06 · web dashboard ── -->
+      <path d="M960 165 H 988" class="s-link"/>
+      <text x="974" y="156" class="s-micro" text-anchor="middle">HTTP</text>
+      <rect x="992" y="82" width="196" height="230" rx="12" class="s-browser"/>
+      <circle cx="1006" cy="96" r="3" class="s-dot"/><circle cx="1016" cy="96" r="3" class="s-dot"/><circle cx="1026" cy="96" r="3" class="s-dot"/>
+      <rect x="1036" y="91" width="142" height="11" rx="5" class="s-url"/>
+      <text x="1004" y="128" class="s-label">CableScope UI</text>
+      <g class="cs-results">
+        <text x="1004" y="152" class="s-sub">fault type</text>
+        <text x="1004" y="171" class="s-out-t">OPEN CIRCUIT</text>
+        <text x="1004" y="197" class="s-sub">location</text>
+        <rect x="1004" y="205" width="172" height="8" rx="4" class="s-track"/>
+        <rect x="1004" y="205" width="112" height="8" rx="4" class="cs-uifill"/>
+        <text x="1004" y="232" class="s-sub">0.65 &#215; L &#8776; 32.5 m</text>
+        <rect x="1004" y="242" width="172" height="10" rx="5" class="s-track"/>
+        <circle cx="1116" cy="247" r="4" class="cs-uimark"/>
+        <text x="1004" y="282" class="s-accent">&#915; = +1 &#183; confidence 96%</text>
+      </g>
+      <text x="600" y="430" class="s-sub" text-anchor="middle">pulse &#8594; reflection &#8594; UART &#8594; Pi 5 acquisition &#8594; 1D CNN &#8594; dashboard &#8212; illustrative loop, 9 s</text>
+      <text x="600" y="452" class="s-sub s-sub--faint" text-anchor="middle">cable ends, lengths and timings are illustrative; the classifier is shown as a rule-based stand-in for the trained 1D CNN.</text>
+    </svg>
+  </div>
+  <p class="swipe-hint">&#8592; swipe the figure &#8594;</p>
+  <p class="foot-note demo-foot">Full pipeline on loop — pulse, reflection, UART handoff, Pi 5 inference, dashboard verdict. Numbers are illustrative.</p>
+
+  <section class="demo-model" id="model">
+    <p class="demo-model-kicker">Project working — interactive model</p>
+    <h2 class="demo-model-title">The full <em>bench</em></h2>
+    <p class="demo-model-sub">The isometric instrument behind the loop — move the fault along the
+    coax, switch between open, short, 3&#215;Z&#8320; and matched loads, and watch &#915;, the incident
+    and reflected traces, the UART handoff into the Pi&nbsp;5 and the dashboard verdict update
+    from one shared model. Every control below is live.</p>
+    <div class="figure-panel demo-model-frame">
+      <iframe data-anatomy-embed src="figures/cablescope.html?theme=dark&amp;autoplay=1" title="CableScope interactive isometric model — terminated coax, reflection traces and the Pi 5 pipeline" loading="lazy"></iframe>
+    </div>
+    <p class="foot-note demo-model-foot">Interactive — selectors and replay are live; the frame auto-fits. Static vector: <a href="figures/cablescope.svg">light</a> &#183; <a href="figures/cablescope-dark.svg">dark</a></p>
+  </section>
+
+  <div class="demo-actions">
+    <a class="demo-btn" href="demo-privacypi.html">Next demo
+      <svg viewBox="0 0 14 12" width="13" height="11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h11M8 1.5 12.5 6 8 10.5"/></svg>
+    </a>
+    <a class="pill" href="index.html#p-cablescope">&#8592; Back to all work</a>
+  </div>
+</main>
+
+<script defer src="figures/embed.js"></script>
+</body>
+</html>

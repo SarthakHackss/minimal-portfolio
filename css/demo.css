@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════════════════════
+   DEMO PAGES — one dedicated page per project animation
+   Loads on top of style.css (which carries the figure keyframes).
+   No main.js here: the nav ships with .show, entrance is pure CSS.
+   ═══════════════════════════════════════════════════════════════ */
+
+.demo-main{
+  width:min(1240px,100%);margin:0 auto;padding:150px 24px 110px;
+}
+.demo-kicker{
+  display:flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+.demo-title{
+  margin-top:26px;
+  font-size:clamp(52px,7.5vw,110px);font-weight:600;letter-spacing:-.03em;line-height:1;
+}
+.demo-title em{font-style:normal;color:var(--accent)}
+.demo-tag{margin-top:14px;color:var(--muted);font-size:16px}
+.demo-copy{margin-top:36px;max-width:64ch;color:var(--muted);font-size:15.5px;line-height:1.7}
+.demo-figure{margin-top:56px}
+.demo-foot{max-width:100%;margin:14px 0 0;text-align:right}
+
+/* ── Interactive project model (figures/ embeds) ── */
+.demo-model{margin-top:110px}
+.demo-model-kicker{
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+.demo-model-kicker::before{
+  content:"";display:inline-block;width:7px;height:7px;border-radius:2px;
+  background:var(--accent);margin-right:10px;vertical-align:1px;
+}
+.demo-model-title{
+  margin-top:16px;
+  font-size:clamp(34px,4.6vw,64px);font-weight:600;letter-spacing:-.02em;line-height:1.05;
+}
+.demo-model-title em{font-style:normal;color:var(--accent)}
+.demo-model-sub{margin-top:16px;max-width:64ch;color:var(--muted);font-size:15.5px;line-height:1.7}
+.demo-model-frame{margin-top:34px;padding:10px}
+.demo-model-frame iframe{
+  display:block;width:100%;height:min(820px,86vh);border:0;border-radius:8px;background:#0b0b0b;
+}
+.demo-model-foot{margin:14px 0 0;text-align:right}
+
+.demo-actions{
+  margin-top:46px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+}
+
+/* CSS-only entrance (index.html runs reveals via main.js; these pages don't) */
+@keyframes demoIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.demo-main > *{animation:demoIn .9s var(--ease) both}
+.demo-main > *:nth-child(2){animation-delay:.06s}
+.demo-main > *:nth-child(3){animation-delay:.12s}
+.demo-main > *:nth-child(4){animation-delay:.18s}
+.demo-main > *:nth-child(5){animation-delay:.22s}
+.demo-main > *:nth-child(6){animation-delay:.26s}
+.demo-main > *:nth-child(7){animation-delay:.3s}
+.demo-main > *:nth-child(8){animation-delay:.34s}
+.demo-main > *:nth-child(9){animation-delay:.38s}
+
+@media (max-width:960px){
+  .demo-main{padding-top:120px}
+}
+@media (max-width:640px){
+  .demo-main{padding-top:100px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .demo-main > *{animation:none}
+}

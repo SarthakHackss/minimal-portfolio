@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cablescope",
+    "title": "CableScope",
+    "parts": 69,
+    "html": "cablescope.html",
+    "svg": "cablescope.svg",
+    "darkSvg": "cablescope-dark.svg"
+  },
+  {
+    "id": "privacy-pi",
+    "title": "Privacy Pi",
+    "parts": 60,
+    "html": "privacy-pi.html",
+    "svg": "privacy-pi.svg",
+    "darkSvg": "privacy-pi-dark.svg"
+  },
+  {
+    "id": "slipper-zero",
+    "title": "Slipper Zero",
+    "parts": 76,
+    "html": "slipper-zero.html",
+    "svg": "slipper-zero.svg",
+    "darkSvg": "slipper-zero-dark.svg"
+  }
+]
