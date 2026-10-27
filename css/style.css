@@ -364,8 +364,11 @@ a.pill:hover{background:var(--panel-2);border-color:rgba(255,255,255,.2);transfo
   .meta-label,.about-meta .pills,.project-meta .pills{text-align:left;justify-content:flex-start}
   .stack-grid{grid-template-columns:1fr 1fr}
   .poster-block{position:static;transform:none;text-align:left!important;margin:22px 0}
-  .poster{flex-direction:column;padding:40px 0}
-  .poster-name{position:absolute}
+  .poster{flex-direction:column;padding:34px 0}
+  /* name stays in flow and the figure overlaps it — person in front of the name, poster-style */
+  .poster-name{position:relative;inset:auto;z-index:1}
+  .poster-name span{font-size:clamp(50px,18vw,182px)}
+  .poster-figure{margin-top:-9.5vw}
   .figure-panel{border-radius:18px}
 }
 @media (max-width:640px){
