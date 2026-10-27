@@ -205,7 +205,7 @@ a.pill:hover{background:var(--panel-2);border-color:rgba(255,255,255,.2);transfo
 .work{padding:120px 0 40px;overflow:clip}
 .work-head{position:relative;padding:0 24px;margin-bottom:140px}
 .work-title{
-  font-size:clamp(90px,17vw,250px);font-weight:600;line-height:.9;
+  font-size:clamp(40px,17vw,250px);font-weight:600;line-height:.9;
   letter-spacing:-.03em;white-space:nowrap;color:var(--text);
 }
 .work-title--ghost{
