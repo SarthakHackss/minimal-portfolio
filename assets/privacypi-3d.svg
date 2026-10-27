@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 660" font-family="Inter,'Segoe UI',Arial,sans-serif" role="img" aria-label="Exploded isometric display model of the Privacy Pi gateway — Raspberry Pi 5 board with Pi-hole, Unbound, Privoxy and Tor layered above it, DNS recursion and blocked-query routes annotated">
+  <title>Privacy Pi — exploded 3D display model</title>
+  <defs>
+    <filter id="gOrange" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gGreen" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gBlue" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+    <linearGradient id="boardSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d2b23"/><stop offset=".55" stop-color="#16211b"/><stop offset="1" stop-color="#121a16"/>
+    </linearGradient>
+    <linearGradient id="slabSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1e23"/><stop offset="1" stop-color="#17171b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══ ground shadow ═══ -->
+  <path d="M233 424 L673 577 L498 678 L118 545 Z" fill="#000" opacity=".55" filter="url(#soft)"/>
+
+  <!-- ═══ central flow axle (behind slabs) ═══ -->
+  <line x1="450" y1="428" x2="450" y2="150" stroke="rgba(255,255,255,.30)" stroke-width="1.4" stroke-dasharray="3 7"/>
+  <circle cx="450" cy="428" r="3" fill="rgba(255,255,255,.5)"/>
+
+  <!-- ═══ Ethernet cable — from your network, into the jack ═══ -->
+  <path d="M628 481 C 686 490, 730 512, 782 538" fill="none" stroke="#3c3c42" stroke-width="4.6" stroke-linecap="round"/>
+  <path d="M628 481 C 686 490, 730 512, 782 538" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- client node -->
+  <g>
+    <path d="M786 534 L808 542 L808 562 L786 554 Z" fill="#101013" stroke="rgba(255,255,255,.22)" stroke-width=".8"/>
+    <path d="M808 542 L830 534 L830 554 L808 562 Z" fill="#0b0b0d" stroke="rgba(255,255,255,.16)" stroke-width=".8"/>
+    <path d="M786 534 L808 526 L830 534 L808 542 Z" fill="#1c1c21" stroke="rgba(255,255,255,.25)" stroke-width=".8"/>
+    <circle cx="808" cy="534" r="2.2" fill="rgba(140,255,190,.8)"/>
+    <text x="682" y="596" font-size="15" font-weight="600" fill="#c9c9ce" letter-spacing="1.2">FROM YOUR NETWORK</text>
+    <text x="682" y="616" font-size="12.5" fill="#77777d" letter-spacing="1">eth0 · gigabit — untrusted upstream</text>
+  </g>
+
+  <!-- ═══ 01 · Raspberry Pi 5 board ═══ -->
+  <g>
+    <g transform="matrix(3.118,1.8,-3.118,1.8,407.8,303.1)">
+      <rect x="0" y="0" width="85" height="56" fill="url(#boardSheen)" stroke="rgba(255,255,255,.30)" stroke-width="0.7"/>
+      <circle cx="3.5" cy="3.5" r="1.3" fill="#0a0f0c" stroke="rgba(255,255,255,.25)" stroke-width=".3"/>
+      <circle cx="81.5" cy="3.5" r="1.3" fill="#0a0f0c" stroke="rgba(255,255,255,.25)" stroke-width=".3"/>
+      <circle cx="3.5" cy="52.5" r="1.3" fill="#0a0f0c" stroke="rgba(255,255,255,.25)" stroke-width=".3"/>
+      <circle cx="81.5" cy="52.5" r="1.3" fill="#0a0f0c" stroke="rgba(255,255,255,.25)" stroke-width=".3"/>
+      <rect x="18" y="1.6" width="46" height="3.2" rx="1" fill="#0c0c0e" stroke="rgba(255,255,255,.2)" stroke-width=".25"/>
+      <g fill="#c9c9ce">
+        <circle cx="20" cy="3.2" r=".62"/><circle cx="22.2" cy="3.2" r=".62"/><circle cx="24.4" cy="3.2" r=".62"/><circle cx="26.6" cy="3.2" r=".62"/><circle cx="28.8" cy="3.2" r=".62"/><circle cx="31" cy="3.2" r=".62"/><circle cx="33.2" cy="3.2" r=".62"/><circle cx="35.4" cy="3.2" r=".62"/><circle cx="37.6" cy="3.2" r=".62"/><circle cx="39.8" cy="3.2" r=".62"/><circle cx="42" cy="3.2" r=".62"/><circle cx="44.2" cy="3.2" r=".62"/><circle cx="46.4" cy="3.2" r=".62"/><circle cx="48.6" cy="3.2" r=".62"/><circle cx="50.8" cy="3.2" r=".62"/><circle cx="53" cy="3.2" r=".62"/><circle cx="55.2" cy="3.2" r=".62"/><circle cx="57.4" cy="3.2" r=".62"/><circle cx="59.6" cy="3.2" r=".62"/><circle cx="61.8" cy="3.2" r=".62"/>
+      </g>
+      <rect x="32" y="16" width="20" height="18" rx="1" fill="#2c2c31" stroke="rgba(255,255,255,.3)" stroke-width=".4"/>
+      <rect x="35" y="19" width="14" height="12" rx=".8" fill="#1a1a1e" stroke="rgba(255,255,255,.14)" stroke-width=".3"/>
+      <text x="42" y="26.4" font-size="3" fill="#c9c9ce" text-anchor="middle" letter-spacing=".3">BCM2712</text>
+      <rect x="15" y="21" width="10" height="10" rx=".8" fill="#232328" stroke="rgba(255,255,255,.22)" stroke-width=".35"/>
+      <text x="20" y="27.4" font-size="2.6" fill="#8f8f96" text-anchor="middle" letter-spacing=".3">RAM</text>
+      <rect x="15" y="38" width="13" height="11" rx="1" fill="#1b1b1f" stroke="rgba(255,255,255,.16)" stroke-width=".3"/>
+      <rect x="75.5" y="7" width="9.5" height="14" rx="1" fill="#101013" stroke="rgba(255,255,255,.3)" stroke-width=".4"/>
+      <rect x="77.5" y="10" width="5.5" height="8" rx=".6" fill="#060607"/>
+      <rect x="75.5" y="27" width="9.5" height="6" rx=".8" fill="#141418" stroke="rgba(255,255,255,.24)" stroke-width=".35"/>
+      <rect x="75.5" y="35.5" width="9.5" height="6" rx=".8" fill="#141418" stroke="rgba(255,255,255,.24)" stroke-width=".35"/>
+      <rect x="75.5" y="47" width="9.5" height="4.6" rx="1.6" fill="#141418" stroke="rgba(255,255,255,.24)" stroke-width=".35"/>
+      <circle cx="72.5" cy="49" r=".9" fill="#ff4d00" filter="url(#gOrange)"/>
+      <circle cx="72.5" cy="52" r=".9" fill="rgba(140,255,190,.85)" filter="url(#gGreen)"/>
+      <path d="M26 26 H31 M26 30 H31 M46 22 H60 V30 H70" fill="none" stroke="rgba(140,255,190,.20)" stroke-width=".35"/>
+      <path d="M20 46 H34 V40 H60" fill="none" stroke="rgba(140,255,190,.14)" stroke-width=".35"/>
+      <text x="42.5" y="54.6" font-size="2.7" fill="rgba(255,255,255,.34)" text-anchor="middle" letter-spacing=".55">FIREWALL · TRAFFIC FILTERING · CUSTOM SCRIPTS</text>
+    </g>
+    <g transform="matrix(-3.118,1.8,0,3.6,672.8,456.1)">
+      <rect x="0" y="0" width="56" height="8" fill="#0d1611" stroke="rgba(255,255,255,.16)" stroke-width=".5"/>
+    </g>
+    <g transform="matrix(3.118,1.8,0,3.6,233.2,403.9)">
+      <rect x="0" y="0" width="85" height="8" fill="#101a15" stroke="rgba(255,255,255,.18)" stroke-width=".5"/>
+      <rect x="6" y="2.6" width="12" height="2.8" rx=".5" fill="#0a0f0c"/>
+    </g>
+  </g>
+
+  <!-- ═══ 02 · Pi-hole slab — blocklist filter ═══ -->
+  <g transform="matrix(3.118,1.8,-3.118,1.8,421.8,270)">
+    <rect x="0" y="0" width="60" height="40" rx="2" fill="url(#slabSheen)" stroke="rgba(255,255,255,.30)" stroke-width="0.8"/>
+    <g stroke="rgba(255,77,0,.30)" stroke-width=".3">
+      <path d="M10 7 V19 M16 7 V19 M22 7 V19 M28 7 V19 M34 7 V19 M40 7 V19 M46 7 V19 M52 7 V19"/>
+      <path d="M10 7 H52 M10 13 H52 M10 19 H52"/>
+    </g>
+    <rect x="10" y="7" width="42" height="12" fill="none" stroke="rgba(255,77,0,.45)" stroke-width=".5"/>
+    <g fill="rgba(255,77,0,.65)">
+      <rect x="11.2" y="8.2" width="5" height="4.8"/><rect x="23.2" y="8.2" width="5" height="4.8"/><rect x="35.2" y="8.2" width="5" height="4.8"/><rect x="47" y="8.2" width="4" height="4.8"/>
+    </g>
+  </g>
+  <g transform="matrix(-3.118,1.8,0,3.6,609,377.9)"><rect x="0" y="0" width="40" height="10" fill="#121216" stroke="rgba(255,255,255,.18)" stroke-width=".5"/></g>
+  <g transform="matrix(3.118,1.8,0,3.6,297.1,342)">
+    <rect x="0" y="0" width="60" height="10" fill="#0e0e11" stroke="rgba(255,255,255,.2)" stroke-width=".5"/>
+    <g fill="rgba(255,77,0,.7)">
+      <circle cx="8" cy="3.4" r=".8"/><circle cx="11" cy="3.4" r=".8"/><circle cx="14" cy="3.4" r=".8"/><circle cx="8" cy="6.6" r=".8"/><circle cx="11" cy="6.6" r=".8"/><circle cx="14" cy="6.6" r=".8"/>
+    </g>
+    <text x="32" y="6.9" font-size="4.2" font-weight="600" fill="#d9d9de" text-anchor="middle" letter-spacing=".9">PI-HOLE</text>
+  </g>
+
+  <!-- ═══ 03 · Unbound slab — recursive resolver ═══ -->
+  <g transform="matrix(3.118,1.8,-3.118,1.8,421.8,200)">
+    <rect x="0" y="0" width="60" height="40" rx="2" fill="url(#slabSheen)" stroke="rgba(255,255,255,.30)" stroke-width="0.8"/>
+  </g>
+  <g transform="matrix(-3.118,1.8,0,3.6,609,307.9)"><rect x="0" y="0" width="40" height="10" fill="#121216" stroke="rgba(255,255,255,.18)" stroke-width=".5"/></g>
+  <g transform="matrix(3.118,1.8,0,3.6,297.1,272)">
+    <rect x="0" y="0" width="60" height="10" fill="#0e0e11" stroke="rgba(255,255,255,.2)" stroke-width=".5"/>
+    <g fill="none" stroke="rgba(140,255,190,.75)" stroke-width=".55">
+      <circle cx="7.5" cy="5" r="1.7"/><circle cx="12.5" cy="5" r="1.7"/><circle cx="17.5" cy="5" r="1.7"/>
+      <path d="M9.2 5 H10.8 M14.2 5 H15.8"/>
+    </g>
+    <text x="33" y="6.9" font-size="4.2" font-weight="600" fill="#d9d9de" text-anchor="middle" letter-spacing=".9">UNBOUND</text>
+  </g>
+
+  <!-- ═══ 04 · Privoxy slab — HTTP proxy ═══ -->
+  <g transform="matrix(3.118,1.8,-3.118,1.8,421.8,130)">
+    <rect x="0" y="0" width="60" height="40" rx="2" fill="url(#slabSheen)" stroke="rgba(255,255,255,.30)" stroke-width="0.8"/>
+  </g>
+  <g transform="matrix(-3.118,1.8,0,3.6,609,237.9)"><rect x="0" y="0" width="40" height="10" fill="#121216" stroke="rgba(255,255,255,.18)" stroke-width=".5"/></g>
+  <g transform="matrix(3.118,1.8,0,3.6,297.1,202)">
+    <rect x="0" y="0" width="60" height="10" fill="#0e0e11" stroke="rgba(255,255,255,.2)" stroke-width=".5"/>
+    <g stroke="rgba(255,255,255,.65)" stroke-width=".55" fill="none">
+      <path d="M6 3.4 H13 M6 6.6 H13 M11 1.8 L13.4 3.4 L11 5 M11 8.2 L13.4 6.6 L11 10"/>
+    </g>
+    <text x="32" y="6.9" font-size="4.2" font-weight="600" fill="#d9d9de" text-anchor="middle" letter-spacing=".9">PRIVOXY</text>
+  </g>
+
+  <!-- ═══ 05 · Tor slab — 3-hop circuit ═══ -->
+  <g transform="matrix(3.118,1.8,-3.118,1.8,421.8,60)">
+    <rect x="0" y="0" width="60" height="40" rx="2" fill="url(#slabSheen)" stroke="rgba(255,255,255,.30)" stroke-width="0.8"/>
+    <g fill="none" stroke="rgba(107,155,255,.6)" stroke-width=".55" stroke-dasharray="1.6 1.6">
+      <path d="M12 12 L30 18 L48 24"/>
+    </g>
+    <g fill="#6b9bff" filter="url(#gBlue)">
+      <circle cx="12" cy="12" r="2"/><circle cx="30" cy="18" r="2"/><circle cx="48" cy="24" r="2"/>
+    </g>
+    <text x="12" y="7.6" font-size="2.6" fill="#8a8a8e" text-anchor="middle" letter-spacing=".4">GUARD</text>
+    <text x="30" y="26.6" font-size="2.6" fill="#8a8a8e" text-anchor="middle" letter-spacing=".4">MIDDLE</text>
+    <text x="48" y="32.6" font-size="2.6" fill="#8a8a8e" text-anchor="middle" letter-spacing=".4">EXIT</text>
+  </g>
+  <g transform="matrix(-3.118,1.8,0,3.6,609,167.9)"><rect x="0" y="0" width="40" height="10" fill="#121216" stroke="rgba(255,255,255,.18)" stroke-width=".5"/></g>
+  <g transform="matrix(3.118,1.8,0,3.6,297.1,132)">
+    <rect x="0" y="0" width="60" height="10" fill="#0e0e11" stroke="rgba(255,255,255,.2)" stroke-width=".5"/>
+    <g fill="#6b9bff" filter="url(#gBlue)">
+      <circle cx="7" cy="3.4" r=".9"/><circle cx="11" cy="5" r=".9"/><circle cx="15" cy="6.6" r=".9"/>
+    </g>
+    <text x="32" y="6.9" font-size="4.2" font-weight="600" fill="#d9d9de" text-anchor="middle" letter-spacing=".9">TOR</text>
+  </g>
+
+  <!-- ═══ recursion — Unbound hops upstream (up-left) ═══ -->
+  <text x="58" y="52" font-size="13" fill="#a9a9af" letter-spacing="1.6">RECURSIVE RESOLUTION — HOP BY HOP</text>
+  <path d="M295 268 C 250 232, 196 176, 138 112" fill="none" stroke="rgba(255,255,255,.34)" stroke-width="1.1" stroke-dasharray="2 5"/>
+  <path d="M148 118 L134 108 L146 100" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.2"/>
+  <g font-size="12.5" fill="#a9a9af" letter-spacing="1">
+    <text x="196" y="222">1 · ROOT</text>
+    <text x="150" y="168">2 · TLD</text>
+    <text x="92" y="118">3 · AUTHORITATIVE NS</text>
+  </g>
+  <g filter="url(#gGreen)">
+    <path d="M214 213 L158 247" stroke="rgba(140,255,190,.55)" stroke-width="1.1"/>
+    <rect x="28" y="244" width="126" height="21" rx="10.5" fill="rgba(140,255,190,.10)" stroke="rgba(140,255,190,.55)" stroke-width=".9"/>
+    <text x="40" y="258.5" font-size="12.5" fill="#8ce0be" letter-spacing=".8">A 203.0.113.42 ✓</text>
+  </g>
+
+  <!-- ═══ blocked query — dies at Pi-hole ═══ -->
+  <g filter="url(#gOrange)">
+    <circle cx="299" cy="364" r="10.5" fill="rgba(255,77,0,.16)" stroke="#ff4d00" stroke-width="1.4"/>
+    <path d="M294.5 359.5 L303.5 368.5 M303.5 359.5 L294.5 368.5" stroke="#ff4d00" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <g font-size="12.5" letter-spacing=".8">
+    <text x="58" y="298" fill="#ff8a55" font-weight="600">ADS.GARD.EXAMPLE — BLOCKED</text>
+    <text x="58" y="318" fill="#8a8a8e">→ 0.0.0.0 · NULL answer</text>
+    <text x="58" y="338" fill="#77777d">Unbound never reached</text>
+  </g>
+  <path d="M262 316 L290 358" stroke="rgba(255,77,0,.4)" stroke-width="1"/>
+
+  <!-- ═══ Tor exit — out to destination ═══ -->
+  <path d="M612 158 C 634 122, 668 96, 722 76" fill="none" stroke="rgba(107,155,255,.55)" stroke-width="1.2" stroke-dasharray="2 5" filter="url(#gBlue)"/>
+  <path d="M712 72 L726 74 L718 86" fill="none" stroke="rgba(107,155,255,.7)" stroke-width="1.3"/>
+  <text x="742" y="62" font-size="12.5" fill="#8fb0ff" letter-spacing="1">DESTINATION</text>
+  <text x="742" y="80" font-size="11.5" fill="#77777d" letter-spacing=".8">TLS :443 — source never exposed</text>
+
+  <!-- ═══ right column labels ═══ -->
+  <g font-size="16" font-weight="600" fill="#d6d6db" letter-spacing="1.4">
+    <text x="648" y="152">TOR</text>
+    <text x="648" y="222">PRIVOXY</text>
+    <text x="648" y="292">UNBOUND</text>
+    <text x="648" y="362">PI-HOLE</text>
+  </g>
+  <g font-size="11.5" fill="#8a8a8e" letter-spacing="1">
+    <text x="648" y="170">3-HOP CIRCUIT · ENCRYPTED</text>
+    <text x="648" y="240">PROXY-AWARE APP ROUTES</text>
+    <text x="648" y="310">FULL RECURSION · UPSTREAM DNS</text>
+    <text x="648" y="380">AD + TRACKER BLOCKLISTS</text>
+  </g>
+  <g stroke="rgba(255,255,255,.22)" stroke-width="1">
+    <path d="M612 168 L640 148"/><path d="M612 238 L640 218"/><path d="M612 308 L640 288"/><path d="M612 378 L640 358"/>
+  </g>
+  <g font-size="11" fill="#ff4d00" font-weight="700" letter-spacing="0">
+    <text x="640" y="136">05</text><text x="640" y="206">04</text><text x="640" y="276">03</text><text x="640" y="346">02</text>
+  </g>
+
+  <!-- ═══ board label ═══ -->
+  <text x="96" y="622" font-size="16" font-weight="600" fill="#d6d6db" letter-spacing="1.4">RASPBERRY PI 5 — GATEWAY HOST</text>
+  <text x="96" y="642" font-size="11.5" fill="#8a8a8e" letter-spacing="1">BCM2712 · FIREWALL RULES · TRAFFIC FILTERING · WIRESHARK-VERIFIED</text>
+  <text x="66" y="622" font-size="11" fill="#ff4d00" font-weight="700">01</text>
+  <path d="M300 590 L366 492" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+</svg>
